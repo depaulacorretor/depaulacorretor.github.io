@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Newton de Paula, Seu Corretor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+			.slides {
+			    padding: 0;
+			    width: 100%;
+			    height: 420px;
+			    display: block;
+			    margin: 0 auto;
+			    position: relative;
+			}
+
+			.slides * {
+			    user-select: none;
+			    -ms-user-select: none;
+			    -moz-user-select: none;
+			    -khtml-user-select: none;
+			    -webkit-user-select: none;
+			    -webkit-touch-callout: none;
+			}
+
+			.slides input { display: none; }
+
+			.slide-container { display: block; }
+
+			.slide {
+			    top: 0;
+			    opacity: 0;
+			    width: 100%;
+			    height: 420px;
+			    display: block;
+			    position: absolute;
+
+			    transform: scale(0);
+
+			    transition: all .7s ease-in-out;
+			}
+
+			.slide img {
+			    width: 100%;
+			    height: 100%;
+			}
+
+			.nav label {
+			    width: 200px;
+			    height: 100%;
+			    display: none;
+			    position: absolute;
+
+				  opacity: 0;
+			    z-index: 9;
+			    cursor: pointer;
+
+			    transition: opacity .2s;
+
+			    color: #FFF;
+			    font-size: 156pt;
+			    text-align: center;
+			    line-height: 380px;
+			    font-family: "Varela Round", sans-serif;
+			    background-color: rgba(255, 255, 255, .3);
+			    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+			}
+
+			.slide:hover + .nav label { opacity: 0.5; }
+
+			.nav label:hover { opacity: 1; }
+
+			.nav .next { right: 0; }
+
+			input:checked + .slide-container  .slide {
+			    opacity: 1;
+
+			    transform: scale(1);
+
+			    transition: opacity 1s ease-in-out;
+			}
+
+			input:checked + .slide-container .nav label { display: block; }
+
+			.nav-dots {
+				width: 100%;
+				bottom: 9px;
+				height: 11px;
+				display: block;
+				position: absolute;
+				text-align: center;
+			}
+
+			.nav-dots .nav-dot {
+				top: -5px;
+				width: 11px;
+				height: 11px;
+				margin: 0 4px;
+				position: relative;
+				border-radius: 100%;
+				display: inline-block;
+				background-color: rgba(0, 0, 0, 0.6);
+			}
+
+			.nav-dots .nav-dot:hover {
+				cursor: pointer;
+				background-color: rgba(0, 0, 0, 0.8);
+			}
+
+			input#img-1:checked ~ .nav-dots label#img-dot-1,
+			input#img-2:checked ~ .nav-dots label#img-dot-2,
+			input#img-3:checked ~ .nav-dots label#img-dot-3,
+			input#img-4:checked ~ .nav-dots label#img-dot-4,
+			input#img-5:checked ~ .nav-dots label#img-dot-5,
+			input#img-6:checked ~ .nav-dots label#img-dot-6 {
+				background: rgba(0, 0, 0, 0.8);
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="index.html">Vista Campo Belo</h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#" class="icon solid fa-angle-down">Layouts</a>
+								<ul>
+									<li><a href="generic.html">Generic</a></li>
+									<li><a href="contact.html">Contact</a></li>
+									<li><a href="elements.html">Elements</a></li>
+									<li>
+										<a href="#">Submenu</a>
+										<ul>
+											<li><a href="#">Option One</a></li>
+											<li><a href="#">Option Two</a></li>
+											<li><a href="#">Option Three</a></li>
+											<li><a href="#">Option Four</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#" class="button">Sign Up</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<section id="main" class="container">
+					<div class="box">
+						<ul class="slides">
+						    <input type="radio" name="radio-btn" id="img-1" checked />
+						    <li class="slide-container">
+								<div class="slide">
+						<img src="https://raw.githubusercontent.com/meulugar/meulugar.github.io/main/images/vista-campo-belo/vista-campo-belo-01.png" />
+							</div>
+								<div class="nav">
+									<label for="img-6" class="prev">&#x2039;</label>
+									<label for="img-2" class="next">&#x203a;</label>
+								</div>
+						    </li>
+
+						    <input type="radio" name="radio-btn" id="img-2" />
+						    <li class="slide-container">
+							<div class="slide">
+							  <img src="https://raw.githubusercontent.com/meulugar/meulugar.github.io/main/images/vista-campo-belo/vista-campo-belo-02.png" />
+							</div>
+								<div class="nav">
+									<label for="img-1" class="prev">&#x2039;</label>
+									<label for="img-3" class="next">&#x203a;</label>
+								</div>
+						    </li>
+
+						    <input type="radio" name="radio-btn" id="img-3" />
+						    <li class="slide-container">
+							<div class="slide">
+							  <img src="https://raw.githubusercontent.com/meulugar/meulugar.github.io/main/images/vista-campo-belo/vista-campo-belo-03.png" />
+							</div>
+								<div class="nav">
+									<label for="img-2" class="prev">&#x2039;</label>
+									<label for="img-4" class="next">&#x203a;</label>
+								</div>
+						    </li>
+
+						    <input type="radio" name="radio-btn" id="img-4" />
+						    <li class="slide-container">
+							<div class="slide">
+							  <img src="https://raw.githubusercontent.com/meulugar/meulugar.github.io/main/images/vista-campo-belo/vista-campo-belo-04.png" />
+							</div>
+								<div class="nav">
+									<label for="img-3" class="prev">&#x2039;</label>
+									<label for="img-5" class="next">&#x203a;</label>
+								</div>
+						    </li>
+
+						    <input type="radio" name="radio-btn" id="img-5" />
+						    <li class="slide-container">
+							<div class="slide">
+							  <img src="https://raw.githubusercontent.com/meulugar/meulugar.github.io/main/images/vista-campo-belo/vista-campo-belo-05.png" />
+							</div>
+								<div class="nav">
+									<label for="img-4" class="prev">&#x2039;</label>
+									<label for="img-6" class="next">&#x203a;</label>
+								</div>
+						    </li>
+
+						    <input type="radio" name="radio-btn" id="img-6" />
+						    <li class="slide-container">
+							<div class="slide">
+							  <img src="https://raw.githubusercontent.com/meulugar/meulugar.github.io/main/images/vista-campo-belo/vista-campo-belo-06.png" />
+							</div>
+								<div class="nav">
+									<label for="img-5" class="prev">&#x2039;</label>
+									<label for="img-1" class="next">&#x203a;</label>
+								</div>
+						    </li>
+
+						    <li class="nav-dots">
+						      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+						      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+						      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+						      <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+						      <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+						      <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+						    </li>
+						</ul>	
+					</div>
+					<header>
+						<h2>Vista Campo Belo</h2>
+						<p>O Vista Campo Belo está localizado em um dos bairros nobres mais tranquilos e desejados da cidade de São Paulo. Com forte identidade local, diversas opções de gastronomia, lazer, cultura e a alguns minutos do Parque Ibirapuera e do Parque do Chuvisco. Localizado na zona sul da capital, o novo empreendimento da Trisul é facilmente acessado pelas principais vias da cidade, como a Marginal Pinheiros e a Avenida Engenheiro Luís Carlos Berrini. Além disso, ele está a 500m² das estações Brooklin e Campo Belo da linha Lilás do metrô. O Vista Campo Belo é um projeto de duas torres, com opções de plantas de 77m² ou 131m². Sendo que os apartamentos de 77m² possuem 2 suítes, lavabo, depósito privativo e vaga de garagem. Já as unidades de 131m² possuem 3 suítes, 3 banheiros, lavabo, 2 vagas de garagem e depósito privativo. A área de lazer do empreendimento é um dos maiores destaques de todo o projeto, onde você e sua família poderão aproveitar de diversos itens, tais como: piscina coberta, salão de festas, salão de jogos, brinquedoteca e espaço fitness.</p>
+					</header>
+						<div class="table-wrapper">
+							<table class="alt">
+								<thead>
+									<tr><td>
+									Especificações
+									</td></tr>
+								</thead>
+								<tbody>
+								<tr><td>2282m² de terreno</tr></td>
+								<tr><td>3 elevadores</tr></td>
+								<tr><td>1 torre</tr></td>
+								<tr><td>33 pavimentos</tr></td>
+								<tr><td>Área de 131m²</tr></td>
+								<tr><td>3 Quartos</tr></td>
+								<tr><td>3 Suítes</tr></td>
+								<tr><td>1 Lavabo</tr></td>
+								<tr><td>1 Depósito privativo</tr></td>
+								<tr><td>2 Vagas para carro</tr></td>
+								<tr><td>Salão de Festas</tr></td>
+								<tr><td>Piscina</tr></td>
+								<tr><td>Salão de Jogos</tr></td>
+								<tr><td>Coworking</tr></td>
+								<tr><td>Fitness</tr></td>
+								<tr><td>Brinquedoteca</tr></td>
+								<tr><td>Pet Place</tr></td>
+								<tr><td>Bicicletário</tr></td>		
+								</tbody>
+								<tfoot>
+									<tr><td>
+									Para informações adicionais, consulte-nos.
+									</td></tr>
+								</tfoot>
+							</table>
+						</div>
+						<span class="image fit"><img src="https://raw.githubusercontent.com/meulugar/meulugar.github.io/main/images/vista-campo-belo/planta-campo-belo.jpg" alt="Planta" /></span>
+						<span class="image fit"><iframe width="100%" height="400px" src="https://www.youtube.com/embed/a9nDiPAylcs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>				
+					</div>
+					
+					<div class="row">
+						<div class="col-12">
+
+							<!-- Form -->
+								<section class="box">
+									<h3>Gostou deste imóvel? Envie uma mensagem e agende uma reunião.</h3>
+									<form method="post" action="#">
+										<div class="row gtr-uniform gtr-50">
+											<div class="col-6 col-12-mobilep">
+												<input type="text" name="name" id="name" value="" placeholder="Nome" />
+											</div>
+											<div class="col-6 col-12-mobilep">
+												<input type="email" name="email" id="email" value="" placeholder="E-mail" />
+											</div>
+											<div class="col-12">
+												<select name="category" id="category">
+													<option value="">- Assunto -</option>
+													<option value="">Agendar Reunião</option>
+													<option value="1">Dúvida</option>
+													<option value="1">Sugestões</option>
+												</select>
+											</div>
+											<div class="col-12">
+												<textarea name="message" id="message" placeholder="Digite sua mensagem" rows="6"></textarea>
+											</div>
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" value="Enviar" /></li>
+													<li><input type="reset" value="Limpar formulário" class="alt" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</section>
+
+						</div>
+					</div>
+				</section>
+				
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+					<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
